@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 
 export const metadata: Metadata = {
-  title: "Protofolio | Prateek Kushwah",
+  title: "Prateek Kushwah | Developer Portfolio",
   description: "This is the protfolio site of Developer Prateek Kushwah",
 };
 

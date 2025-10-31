@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import styles from './Hero.module.css';
+import styles from '../styles/Hero.module.css';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);

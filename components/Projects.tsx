@@ -17,7 +17,7 @@ import {
   Database,
   Cloud
 } from 'lucide-react';
-import styles from './Projects.module.css';
+import styles from '../styles/Projects.module.css';
 import Link from 'next/link';
 
 interface Project {

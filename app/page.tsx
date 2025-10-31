@@ -3,8 +3,8 @@ import dynamic from 'next/dynamic';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import Hero from "@/components/Hero/Hero";
-import Projects from "@/components/Projects/Projects";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 
 const Home: NextPage = () => {
 
