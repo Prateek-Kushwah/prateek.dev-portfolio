@@ -1,0 +1,32 @@
+:root {
+  /* Color Palette - Dark Modern with Red Energy */
+  --bg-dark: #1D1616;
+  --bg-darker: #151010;
+  --bg-card: #251E1E;
+  
+  --color-primary: #8E1616;
+  --color-secondary: #D84040;
+  --color-accent: #FF4757;
+  
+  --color-light: #EEEEEE;
+  --color-muted: #A0A0A0;
+  --color-border: #332929;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #8E1616 0%, #D84040 100%);
+  --gradient-dark: linear-gradient(135deg, #251E1E 0%, #1D1616 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(142, 22, 22, 0.3) 0%, rgba(216, 64, 64, 0.1) 100%);
+
+  /* Shadows & Glows */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --shadow-glow: 0 4px 30px rgba(142, 22, 22, 0.3);
+  --shadow-intense: 0 8px 40px rgba(216, 64, 64, 0.2);
+
+  /* Borders */
+  --border-accent: 1px solid rgba(142, 22, 22, 0.3);
+  --border-glow: 1px solid rgba(216, 64, 64, 0.2);
+
+  /* Animations */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
