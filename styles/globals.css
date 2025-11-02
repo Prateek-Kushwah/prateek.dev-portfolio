@@ -1,4 +1,4 @@
-@import url('./variables.css');
+@import url("./variables.css");
 
 /* Base Styles */
 * {
@@ -19,7 +19,12 @@ body {
 }
 
 /* Typography Scale */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   line-height: 1.2;
   color: var(--color-light);
@@ -28,7 +33,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  background: linear-gradient(135deg, var(--color-light) 0%, var(--color-secondary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-light) 0%,
+    var(--color-secondary) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -67,45 +76,47 @@ p {
   background: var(--color-secondary);
 }
 /* Button Styles */
-.btn {
-  padding: 12px 32px;
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  animation: fadeInUp 0.5s ease-out 1.3s both;
+}
+
+.primaryButton,
+.secondaryButton {
+  flex: 1;
+  padding: 0.8rem;
+  background: var(--gradient-primary);
+  color: var(--color-light);
   border: none;
-  border-radius: 8px;
-  font-family: inherit;
+  border-radius: 50px;
+  font-family: var(--font-raleway), sans-serif;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
   transition: var(--transition-smooth);
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-}
-
-.btn-primary {
-  background: var(--gradient-primary);
-  color: var(--color-light);
   box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
+.primaryButton:hover {
+  transform: translateY(-3px);
   box-shadow: var(--shadow-glow);
 }
 
-.btn-secondary {
+.secondaryButton {
   background: transparent;
-  color: var(--color-secondary);
   border: var(--border-accent);
 }
 
-.btn-secondary:hover {
-  background: rgba(142, 22, 22, 0.1);
-  border: var(--border-glow);
-  box-shadow: var(--shadow-intense);
+.secondaryButton:hover {
+  background: rgba(249, 250, 251, 0.05);
+  border-color: rgba(142, 22, 22, 0.5);
+  transform: translateY(-2px);
 }
-
 /* Skills/Technology Tags */
 .tech-tag {
   display: inline-block;
