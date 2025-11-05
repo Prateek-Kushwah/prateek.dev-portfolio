@@ -1,0 +1,225 @@
+.contactSection {
+  padding: 5rem 1rem;
+  background: var(--bg-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.contactSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-glow);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  color: var(--color-muted);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputWrapper {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 12px;
+  transition: var(--transition-smooth);
+  border: var(--border-accent);
+  box-shadow: var(--shadow-soft);
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.formInput {
+  width: 100%;
+  padding: 1.5rem 1rem 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--color-light);
+  font-family: inherit;
+  font-size: 1rem;
+  resize: none;
+  transition: var(--transition-smooth);
+}
+
+.formInput:focus {
+  outline: none;
+}
+
+.formInput:-webkit-autofill,
+.formInput:-webkit-autofill:hover,
+.formInput:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-light);
+  -webkit-box-shadow: 0 0 0px 1000px var(--bg-card) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.textarea {
+  min-height: 120px;
+}
+
+.formLabel {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: var(--color-muted);
+  pointer-events: none;
+  transition: var(--transition-smooth);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.formLabel.focused {
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-secondary);
+  transform: translateY(0);
+}
+
+.errorMessage {
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.submitButton {
+  position: relative;
+  padding: 1rem 2rem;
+  background: var(--gradient-primary);
+  color: var(--color-light);
+  border: none;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.buttonSpark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-spark);
+  opacity: 0;
+  transition: var(--transition-smooth);
+  border-radius: 50px;
+}
+
+.submitButton:active:not(:disabled) .buttonSpark {
+  opacity: 0.3;
+  transform: scale(1.1);
+}
+
+.spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--color-light);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.message {
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  animation: fadeInUp 0.5s ease-out;
+  margin-top: 1rem;
+}
+
+.message.success {
+  background: rgba(34, 197, 94, 0.1);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.1);
+}
+
+.message.error {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-accent);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 3rem 1rem;
+  }
+  
+  .submitButton {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
